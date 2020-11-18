@@ -1,0 +1,18 @@
+<nav>
+    <button [routerLink]="['/user/create']">Create User</button>
+  </nav>
+<h2>User List</h2>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.address}}</td>
+        <td><a type="button" [routerLink]="['/user/edit', user.id]" (click)="getUserById(user.id)" >Edit</a></td>
+        <td></td>
+    </tr>
+</table> 

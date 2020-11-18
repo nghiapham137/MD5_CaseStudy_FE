@@ -1,0 +1,18 @@
+<h2>Create User</h2>
+<a [routerLink]="['']">Back to Home page</a>
+<form>
+    <div *ngIf="!submitted">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" [(ngModel)]="user.name" name="name"/>
+          </div>
+          <div>
+            <label for="address">Address</label>
+            <input type="text"  id="address" [(ngModel)]="user.address" name="address" />
+          </div>
+          <button type="submit" class="btn btn-success" (click)="createUser()">Submit</button>
+    </div>
+</form>
+    
+      <h4 *ngIf="submitted">Your submitted successfully!</h4>
+
