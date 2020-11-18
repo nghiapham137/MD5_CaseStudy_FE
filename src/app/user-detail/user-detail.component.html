@@ -1,8 +1,15 @@
-<h2>User detail</h2>
-<div>
-    <label for="name">Name</label>
-    <input type="text" id="name" [ngModel]="currentUser.name" name="name"/>
-    <label for="address">Address</label>
-    <input type="text" id="address" [ngModel]="currentUser.address" name="address"/>
-    <a type="button" [routerLink]="['']">Back to Home page</a>
+<div class="container">
+    <h2 style="text-align: center;">User detail</h2>
+    <table class="table">
+        <tr class="table-dark">
+           <td>Name</td>
+           <td>Address</td>     
+        </tr>
+        <tr>
+            <td>{{currentUser.name}}</td>
+            <td>{{currentUser.address}}</td>
+        </tr>
+    </table>
+    <button type="button" [routerLink]="['']" class="btn btn-secondary">Back</button>
 </div>
+

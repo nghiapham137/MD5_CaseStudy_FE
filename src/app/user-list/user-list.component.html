@@ -1,20 +1,27 @@
-<nav>
-    <button [routerLink]="['/user/create']">Create User</button>
-  </nav>
-<h2>User List</h2>
-<table border="1">
-    <tr>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Edit</td>
-        <td>Delete</td>
-        <td>View</td>
-    </tr>
-    <tr *ngFor="let user of users">
-        <td>{{user.name}}</td>
-        <td>{{user.address}}</td>
-        <td><a type="button" [routerLink]="['/user/edit', user.id]"  >Edit</a></td>
-        <td><button type="button"  (click)="deleteUser(user.id)">Delete</button></td>
-        <td><a type="button" [routerLink]="['/user', user.id]">View</a></td>
-    </tr>
-</table> 
+
+<div class="container">
+    <h2 style="text-align: center;">User List</h2>
+    <button [routerLink]="['/user/create']" class="btn btn-primary">Create User</button>
+<table class="table">
+    <thead class="table-active">
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Edit</td>
+            <td>Delete</td>
+            <td>View</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.address}}</td>
+            <td><button type="button" [routerLink]="['/user/edit', user.id]" class="btn btn-success" >Edit</button></td>
+            <td><button type="button"  (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button></td>
+            <td><button type="button" [routerLink]="['/user', user.id]" class="btn btn-info">Detail</button></td>
+        </tr>
+    </tbody>
+    
+</table>
+ </div>  
+

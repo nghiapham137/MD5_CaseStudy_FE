@@ -1,12 +1,20 @@
-<h2>Edit User</h2>
-<a [routerLink]="['']">Back to Home page</a>
+<div class="container">
+    <h2 style="text-align: center;">Edit User</h2>
+
 <form>
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" [(ngModel)]="currentUser.name" name="name"/>
-        <label for="address">Address</label>
-        <input type="text" id="address" [(ngModel)]="currentUser.address" name="address"/>
-        <button  (click)="updateUser()">Update</button>
-    </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" [(ngModel)]="currentUser.name" name="name" class="form-control"/>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" [(ngModel)]="currentUser.address" name="address" class="form-control"/>
+        </div>
+        
+        <button  (click)="updateUser()" class="btn btn-primary">Update</button>
+        <button type="button" [routerLink]="['']" class="btn btn-secondary">Back</button>
 </form>
+</div>
+
 
