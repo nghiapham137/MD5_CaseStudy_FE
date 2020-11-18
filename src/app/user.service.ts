@@ -30,8 +30,8 @@ export class UserService {
     return this.httpClient.delete(`${this.API_URL}/delete/${id}`);
   }
 
-  updateUser(user: IUser): Observable<IUser> {
-    return this.httpClient.put<IUser>(`${this.API_URL}/edit/${user.id}`, user);
+  updateUser(id: any, user: IUser): Observable<IUser> {
+    return this.httpClient.put<IUser>(`${this.API_URL}/edit/${id}`, user);
   }
   
 }
