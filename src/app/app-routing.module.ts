@@ -6,6 +6,7 @@ import {UserCreateFormComponent} from './user-create-form/user-create-form.compo
 import { UserEditFormComponent } from './user-edit-form/user-edit-form.component';
 
 
+
 const routes: Routes = [ {
   path: '',
   component: UserListComponent

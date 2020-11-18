@@ -11,6 +11,7 @@ import { UserCreateFormComponent } from './user-create-form/user-create-form.com
 import { UserEditFormComponent } from './user-edit-form/user-edit-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserDetailComponent,
     UserCreateFormComponent,
     UserEditFormComponent
+    
   ],
   imports: [
     BrowserModule,

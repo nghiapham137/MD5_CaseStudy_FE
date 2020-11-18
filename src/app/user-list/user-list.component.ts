@@ -9,6 +9,11 @@ import { UserService } from '../user.service';
 })
 export class UserListComponent implements OnInit {
   users: IUser[] = [];
+  currentUser: any = {
+    name: '',
+    address: ''
+
+  }
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
@@ -16,13 +21,22 @@ export class UserListComponent implements OnInit {
   }
 
   getUser() {
-    this.service.getUsers().subscribe(next => (this.users = next), error => (this.users = []));
+    return this.service.getUsers().subscribe(next => (this.users = next), error => (this.users = []));
   }
 
   getUserById(id) {
     return this.service.getUserById(id);
   }
 
+  deleteUser(id: any) {
+    debugger
+    if(window.confirm('Are you sure?')){
+      this.service.deleteUser(id).subscribe(res => {
+        this.getUser();
+      }, error => window.alert('errorr'));
+    }
+    
+  }
   
 
 }
